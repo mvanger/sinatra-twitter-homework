@@ -9,9 +9,9 @@
 
 <ul>
   <% @my_tweets.each do |tweet| %>
-    <li><%= tweet[:text] %></li>
+    <li><a href="http://twitter.com/<%= @username %>/status/<%= tweet[:id] %>"><%= tweet[:text] %></a></li>
+     <% tweet[:media].each do |photo| %>
+      <img src="<%= photo[:media_url] %>" />
+     <% end %>
   <% end %>
 </ul>
-
-
-

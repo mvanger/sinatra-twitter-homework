@@ -1,0 +1,17 @@
+<h1>Twitter Machine of @<%= @username %></h1>
+<h3><%= @user.name %></h3>
+  <img src="<%= @user.profile_image_url %>" />
+<h4><%= @user.description %></h4>
+<p>Location: <%= @user.location %></p>
+<p>Number of Tweets: <%= @user.statuses_count %></p>
+<p>Number of Followers: <%= @user.followers_count %></p>
+<p>Number of Following: <%= @user.friends_count %></p>
+
+<ul>
+  <% @my_tweets.each do |tweet| %>
+    <li><%= tweet[:text] %></li>
+  <% end %>
+</ul>
+
+
+
